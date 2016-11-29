@@ -1,14 +1,14 @@
 <div class="form-login">
-  <form class="" name="new-info" ng-submit="add.addInfo(info)">
+  <form class="" name="new-info" ng-submit="login.activate(user)">
     <p class="control">
-      <input name="userName" type="text" placeholder="User Name"
-             ng-model="info.name" required/>
+      <input name="username" type="text" placeholder="User Name"
+             ng-model="user.username" required/>
     </p>
     <p class="control">
       <input name="password" type="password" placeholder="Password"
-             ng-model="info.email" required />
+             ng-model="user.password" required/>
      </p>
  
     <button class="button is-primary">Login</button>
   </form>
-</div>
+</div> 
