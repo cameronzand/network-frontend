@@ -1,5 +1,5 @@
 function LayoutController () {
-  console.log("LAYOUT CONTROLLER IS ALIVE");
+  //console.log("LAYOUT CONTROLLER IS ALIVE");
 
   let vm = this;
 
@@ -7,7 +7,7 @@ function LayoutController () {
   vm.clickMe = clickMe;
 
   function clickMe () {
-    console.log("I got clicked");
+    //console.log("I got clicked");
   }
 }
 
