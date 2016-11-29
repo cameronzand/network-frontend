@@ -1,0 +1,29 @@
+<div class="form-login">
+  <form class="" name="new-info" ng-submit="register.createUser(user)">
+    <p class="control">
+      <input name="username" type="text" placeholder="User Name"
+             ng-model="user.username" required/>
+    </p>
+    <p class="control">
+      <input name="password" type="password" placeholder="Password"
+             ng-model="user.password" required/>
+     </p>
+    <p class="control">
+      <input name="email" type="text" placeholder="Email"
+             ng-model="user.email" required/>
+     </p>
+    <p class="control">
+      <input name="name" type="text" placeholder="Full Name"
+             ng-model="user.name" required/>
+     </p>
+    <p class="control">
+      <input name="linkedin" type="text" placeholder="Linkedin URL"
+             ng-model="user.linkedin" required/>
+     </p>
+         <p class="control">
+      <input name="company" type="text" placeholder="Company (optional)"
+             ng-model="user.company" />
+     </p>
+    <button class="button is-primary">Register</button>
+  </form>
+</div> 

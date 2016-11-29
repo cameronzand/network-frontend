@@ -16,6 +16,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/login',
 			templateUrl: 'templates/login.tpl.html',
 			controller: 'LoginController as login'
+		})
+		.state('root.register',{
+			url: '/register',
+			templateUrl: 'templates/register.tpl.html',
+			controller: 'RegisterController as register'
 		});
 
 	$urlRouterProvider.otherwise('/');
