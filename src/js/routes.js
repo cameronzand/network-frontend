@@ -14,7 +14,8 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 		})
 		.state('root.login',{
 			url: '/login',
-			templateUrl: 'templates/login.tpl.html'
+			templateUrl: 'templates/login.tpl.html',
+			controller: 'LoginController as login'
 		});
 
 	$urlRouterProvider.otherwise('/');

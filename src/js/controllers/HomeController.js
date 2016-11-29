@@ -1,5 +1,5 @@
 function HomeController () {
-  console.log("HOME CONTROLLER IS ALIVE");
+  //console.log("HOME CONTROLLER IS ALIVE");
 
   let vm = this;
 
@@ -7,7 +7,7 @@ function HomeController () {
   vm.clickMe = clickMe;
 
   function clickMe () {
-    console.log("I got clicked");
+    //console.log("I got clicked");
   }
 }
 
