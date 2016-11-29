@@ -5,6 +5,7 @@ function UserService ($http) {
 
   this.login = login;
   this.create = create;
+  this.allUsers = allUsers;
  
 
   function create (user) {
@@ -13,6 +14,10 @@ function UserService ($http) {
 
   function login (user) {
     return $http.post(`${SERVER}/login`, user);
+  };
+
+  function allUsers (user) {
+    return $http.get(`${SERVER}/users`);
   };
 
 

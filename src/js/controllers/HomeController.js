@@ -1,18 +1,21 @@
-function HomeController () {
-  //console.log("HOME CONTROLLER IS ALIVE");
+
+function HomeController (UserService) {
 
   let vm = this;
 
-  vm.message = 'Hello from HomeController!';
-  vm.clickMe = clickMe;
+  vm.users = [];
 
-  function clickMe () {
-    //console.log("I got clicked");
+  function init () {
+    console.log("home controller");
+    UserService.allUsers().then((resp) => {
+      vm.users = resp.data;
+      console.log(resp)
+    });
+
   }
-}
 
-HomeController.$inject = [];
+  init();
+};
 
-
-
+HomeController.$inject = ['UserService'];
 export { HomeController };
