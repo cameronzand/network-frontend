@@ -1,17 +1,17 @@
-function LayoutController () {
+function LayoutController (UserService) {
   //console.log("LAYOUT CONTROLLER IS ALIVE");
 
   let vm = this;
 
-  vm.message = 'Hello from LayoutController!';
-  vm.clickMe = clickMe;
+  vm.logout = logout;
 
-  function clickMe () {
-    //console.log("I got clicked");
+  function logout () {
+  	UserService.logout();
+   
   }
 }
 
-LayoutController.$inject = [];
+LayoutController.$inject = ['UserService'];
 
 
 

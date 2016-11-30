@@ -8,6 +8,7 @@ function LoginController ($state, UserService) {
   function activate (user) {
     UserService.login(user).then((resp) => {
       console.log(resp)
+      UserService.setUser(resp.data);
       $state.go('root.home');
     });
   };

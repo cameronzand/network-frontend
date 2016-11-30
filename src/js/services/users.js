@@ -1,12 +1,14 @@
 
 import { SERVER } from '../server';
 
-function UserService ($http) {
+function UserService ($http, $cookies) {
 
   this.login = login;
   this.create = create;
   this.allUsers = allUsers;
   this.getUser = getUser;
+  this.setUser = setUser;
+  this.logout = logout;
  
 
   function create (user) {
@@ -25,8 +27,16 @@ function UserService ($http) {
   	return $http.get(`${SERVER}/users/${id}`)
   }
 
+  function setUser (data){
+    $cookies.put('username', data.username);
+    $cookies.put('access_token', data.access_token);
+  }
 
+  function logout () {
+    $cookies.remove('username');
+    $cookies.remove('access_token');
+  }
 };
 
-UserService.$inject = ['$http'];
+UserService.$inject = ['$http', '$cookies'];
 export { UserService };
