@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 
+
 import { routerConfig } from './routes';
 import { LayoutController } from './controllers/LayoutController';
 import { HomeController } from './controllers/HomeController';
@@ -13,9 +14,10 @@ import { UserService } from './services/users';
 
 
 import 'angular-ui-router';
+import 'angular-cookies';
 
 angular 
-	.module('app', ['ui.router'])
+	.module('app', ['ui.router', 'ngCookies'])
 	.controller('LayoutController', LayoutController)
 	.controller('HomeController', HomeController)
 	.controller('LoginController', LoginController)
