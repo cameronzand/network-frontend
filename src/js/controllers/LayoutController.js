@@ -1,17 +1,23 @@
-function LayoutController (UserService) {
-  //console.log("LAYOUT CONTROLLER IS ALIVE");
+function LayoutController (UserService, $rootScope, $state) {
 
   let vm = this;
 
+  vm.loggedIn = UserService.isLoggedIn();
   vm.logout = logout;
+
+  $rootScope.$on('loginChange', (event, data) => {
+    vm.loggedIn = UserService.isLoggedIn();
+    console.log(vm.loggedIn)
+  });
 
   function logout () {
   	UserService.logout();
+  	$state.go('root.login');
    
   }
 }
 
-LayoutController.$inject = ['UserService'];
+LayoutController.$inject = ['UserService', '$rootScope', '$state'];
 
 
 
