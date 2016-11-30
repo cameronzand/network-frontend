@@ -21,6 +21,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/register',
 			templateUrl: 'templates/register.tpl.html',
 			controller: 'RegisterController as register'
+		})
+		.state('root.single',{
+			url: '/users/:id',
+			templateUrl: 'templates/single.tpl.html',
+			controller: 'SingleController as single'
 		});
 
 	$urlRouterProvider.otherwise('/');

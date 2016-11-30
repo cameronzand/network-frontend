@@ -6,6 +6,7 @@ import { LayoutController } from './controllers/LayoutController';
 import { HomeController } from './controllers/HomeController';
 import { LoginController } from './controllers/LoginController';
 import { RegisterController } from './controllers/RegisterController';
+import { SingleController } from './controllers/SingleController';
 
 import { UserService } from './services/users';
 
@@ -19,5 +20,6 @@ angular
 	.controller('HomeController', HomeController)
 	.controller('LoginController', LoginController)
 	.controller('RegisterController', RegisterController)
+	.controller('SingleController', SingleController)
 	.config(routerConfig)
 	.service ('UserService', UserService)
