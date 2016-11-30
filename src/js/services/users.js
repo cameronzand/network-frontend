@@ -9,6 +9,7 @@ function UserService ($http, $cookies) {
   this.getUser = getUser;
   this.setUser = setUser;
   this.logout = logout;
+  this.isLoggedIn = isLoggedIn;
  
 
   function create (user) {
@@ -36,6 +37,11 @@ function UserService ($http, $cookies) {
     $cookies.remove('username');
     $cookies.remove('access_token');
   }
+
+  function isLoggedIn () {
+   return $cookies.get('username') ? true : false;
+  }
+
 };
 
 UserService.$inject = ['$http', '$cookies'];
