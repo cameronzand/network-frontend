@@ -6,7 +6,7 @@ function RegisterController (UserService, $state) {
 
   function createUser (user) {
     UserService.create(user).then((resp) => {
-      console.log('Created User: ', resp);
+      console.log('User: ', resp);
       $state.go('root.home');
     });
   };

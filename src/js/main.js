@@ -24,4 +24,4 @@ angular
 	.controller('RegisterController', RegisterController)
 	.controller('SingleController', SingleController)
 	.config(routerConfig)
-	.service ('UserService', UserService)
+	.service ('UserService', UserService);
