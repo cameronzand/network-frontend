@@ -10,7 +10,8 @@ function UserService ($http, $cookies) {
   this.setUser = setUser;
   this.logout = logout;
   this.isLoggedIn = isLoggedIn;
- 
+  this.postLoc = postLoc;
+  this.getHeaders = getHeaders;
 
   function create (user) {
     return $http.post(`${SERVER}/users`, user);
@@ -41,6 +42,28 @@ function UserService ($http, $cookies) {
   function isLoggedIn () {
    return $cookies.get('username') ? true : false;
   }
+
+  function postLoc (location) {
+    console.log("request made.");
+    console.log(getHeaders());
+    let req = {
+      url: `${SERVER}/location`,
+      params: location,
+      method: 'POST',
+      headers: getHeaders()
+    };
+    return $http(req);
+    //return $http.post(`${SERVER}/location`, location);
+  }
+
+  function getHeaders () {
+    let token = $cookies.get('access_token');
+    return {
+      Authorization: `Bearer ${token}`
+    };
+  }
+
+
 
 };
 

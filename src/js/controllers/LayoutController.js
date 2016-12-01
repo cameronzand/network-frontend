@@ -4,44 +4,45 @@ function LayoutController (UserService, $rootScope, $state) {
 
   vm.loggedIn = UserService.isLoggedIn();
   vm.logout = logout;
+  vm.internalId = null; 
 
   $rootScope.$on('loginChange', (event, data) => {
     vm.loggedIn = UserService.isLoggedIn();
     console.log(vm.loggedIn)
+    startUpdates()
   });
 
   function logout () {
   	UserService.logout();
   	vm.loggedIn = false;
+  	clearInterval(vm.intervalId)
+  	vm.intervalId = null;
   }
 
-setInterval(function() {
-	if (navigator.geolocation) {
-	  var timeoutVal = 10 * 1000 * 1000;
-	  navigator.geolocation.getCurrentPosition(
-	    displayPosition, 
-	    displayError,
-	    { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
-	  );
-	}
-	else {
-	  alert("Geolocation is not supported by this browser");
-	}
-}, 1000 * 60 * 5);
+  function startUpdates () {
+  	vm.intervalId = setInterval(updateLoc, 1000)
+
+  }
  
 
-function displayPosition(position) {
-  console.log("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+ function updateLoc () {
+	if (navigator.geolocation) {
+		console.log('there is geolation');
+	  navigator.geolocation.getCurrentPosition(position => {
+	  	let location = {};
+	  	location.latitude = position.coords.latitude;
+	  	location.longitude = position.coords.longitude;
+	  	UserService.postLoc(location).then(function (data){
+	  		console.log(data);
+	  		console.log(location);
+	  	});
+	  })
+	}
+	else {
+	  alert("Geolocation not supported by this browser, use something else besides Internet Explorer!");
+	}
 }
 
-function displayError(error) {
-  var errors = { 
-    1: 'Permission denied',
-    2: 'Position unavailable',
-    3: 'Request timeout'
-  };
-  alert("Error: " + errors[error.code]);
-};
 
 
 
