@@ -1,7 +1,7 @@
 <div class="homewrapper">
 	<ul>
 		<li ng-repeat="user in home.users">
-			<img src="{{user.img}}" class="profimage" />
+			<img ng-src="{{ user.img }}" class="profimage" />
 			<a href="#/users/{{user.id}}">{{user.name}}</a>
 
 

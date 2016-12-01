@@ -13,21 +13,16 @@ function LoginController ($state, UserService, $rootScope) {
       UserService.setUser(resp.data);
       $rootScope.$broadcast('loginChange', {});
       $state.go('root.home');
+      // $state.go('root.single' UserService.getUser);
 
     });
-    
+
   };
 
+  console.log('after activate, login controller loaded');
 
 };
 
 LoginController.$inject = ['$state', 'UserService', '$rootScope'];
-
-
-
-
-
-
-
 
 export { LoginController };

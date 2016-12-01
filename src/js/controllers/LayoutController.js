@@ -12,8 +12,7 @@ function LayoutController (UserService, $rootScope, $state) {
 
   function logout () {
   	UserService.logout();
-  	$state.go('root.login');
-   
+  	vm.loggedIn = false;
   }
 
  
@@ -30,7 +29,7 @@ else {
 }
 
 function displayPosition(position) {
-  alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+  console.log("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
 }
 
 function displayError(error) {
