@@ -20,7 +20,7 @@ function LayoutController (UserService, $rootScope, $state) {
   }
 
   function startUpdates () {
-  	vm.intervalId = setInterval(updateLoc, 1000)
+  	vm.intervalId = setInterval(updateLoc, 50000)
 
   }
  

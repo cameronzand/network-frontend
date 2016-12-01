@@ -12,8 +12,8 @@ function LoginController ($state, UserService, $rootScope) {
       console.log(resp)
       UserService.setUser(resp.data);
       $rootScope.$broadcast('loginChange', {});
-      $state.go('root.home');
-      // $state.go('root.single' UserService.getUser);
+      // $state.go('root.home');
+      $state.go('root.single', {id: resp.data.id});
 
     });
 

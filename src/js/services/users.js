@@ -1,7 +1,7 @@
 
 import { SERVER } from '../server';
 
-function UserService ($http, $cookies) {
+function UserService ($http, $cookies, $state) {
 
   this.login = login;
   this.create = create;
@@ -37,6 +37,9 @@ function UserService ($http, $cookies) {
   function logout () {
     $cookies.remove('username');
     $cookies.remove('access_token');
+    console.log($state);
+    $state.go('root.login');
+
   }
 
   function isLoggedIn () {
@@ -67,5 +70,5 @@ function UserService ($http, $cookies) {
 
 };
 
-UserService.$inject = ['$http', '$cookies'];
+UserService.$inject = ['$http', '$cookies', '$state'];
 export { UserService };
