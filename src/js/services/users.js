@@ -1,7 +1,7 @@
 
 import { SERVER } from '../server';
 
-function UserService ($http, $cookies) {
+function UserService ($http, $cookies, $state) {
 
   this.login = login;
   this.create = create;
@@ -10,7 +10,8 @@ function UserService ($http, $cookies) {
   this.setUser = setUser;
   this.logout = logout;
   this.isLoggedIn = isLoggedIn;
- 
+  this.postLoc = postLoc;
+  this.getHeaders = getHeaders;
 
   function create (user) {
     return $http.post(`${SERVER}/users`, user);
@@ -36,13 +37,38 @@ function UserService ($http, $cookies) {
   function logout () {
     $cookies.remove('username');
     $cookies.remove('access_token');
+    console.log($state);
+    $state.go('root.login');
+
   }
 
   function isLoggedIn () {
    return $cookies.get('username') ? true : false;
   }
 
+  function postLoc (location) {
+    console.log("request made.");
+    console.log(getHeaders());
+    let req = {
+      url: `${SERVER}/location`,
+      params: location,
+      method: 'POST',
+      headers: getHeaders()
+    };
+    return $http(req);
+    //return $http.post(`${SERVER}/location`, location);
+  }
+
+  function getHeaders () {
+    let token = $cookies.get('access_token');
+    return {
+      Authorization: `Bearer ${token}`
+    };
+  }
+
+
+
 };
 
-UserService.$inject = ['$http', '$cookies'];
+UserService.$inject = ['$http', '$cookies', '$state'];
 export { UserService };
