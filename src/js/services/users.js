@@ -12,10 +12,15 @@ function UserService ($http, $cookies, $state) {
   this.isLoggedIn = isLoggedIn;
   this.postLoc = postLoc;
   this.getHeaders = getHeaders;
+  this.deleteUser = deleteUser;
 
   function create (user) {
     return $http.post(`${SERVER}/users`, user);
   };
+
+  function deleteUser (user) {
+    return $http.delete(`${SERVER}/user/${user.id}`)
+  }
 
   function login (user) {
     return $http.post(`${SERVER}/login`, user);
