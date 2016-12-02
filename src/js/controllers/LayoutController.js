@@ -20,6 +20,7 @@ function LayoutController (UserService, $rootScope, $state) {
   }
 
   function startUpdates () {
+  	updateLoc();
   	vm.intervalId = setInterval(updateLoc, 50000)
 
   }
@@ -41,6 +42,7 @@ function LayoutController (UserService, $rootScope, $state) {
 	else {
 	  alert("Geolocation not supported by this browser, use something else besides Internet Explorer!");
 	}
+
 }
 
 

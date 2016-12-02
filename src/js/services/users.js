@@ -37,8 +37,9 @@ function UserService ($http, $cookies, $state) {
   function logout () {
     $cookies.remove('username');
     $cookies.remove('access_token');
-    console.log($state);
-    $state.go('root.login');
+    console.log('state is: ', $state.current.name);
+    // $state.go('root.login');
+    console.log('now state is: ', $state.current.name);
 
   }
 
