@@ -1,9 +1,10 @@
 
-function HomeController (UserService) {
+function HomeController (UserService, $state) {
 
   let vm = this;
 
   vm.users = [];
+  vm.goLogin = goLogin;
 
   function init () {
     console.log("home controller");
@@ -15,7 +16,11 @@ function HomeController (UserService) {
   }
 
   init();
+
+  function goLogin() {
+    $state.go('root.login');
+  }
 };
 
-HomeController.$inject = ['UserService'];
+HomeController.$inject = ['UserService', '$state'];
 export { HomeController };
