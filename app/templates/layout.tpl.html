@@ -1,6 +1,9 @@
 
+<div class="main-content" ui-view>
+	
+</div>
 <nav>
-	<span class="navspace"><a href="#/">Home</a></span>
+	<span class="navspace"><a href="#/"><img src=images/home.png></a></span>
 	<span class="navspace"><a href="#/login"
 		ng-show="!layout.loggedIn">Login</a></span>
 	<span class="navspace"><a href="#/register"
@@ -10,6 +13,3 @@
 		ng-click="layout.logout()">Logout</a>
 </nav>
 
-<div class="main-content" ui-view>
-	
-</div>
