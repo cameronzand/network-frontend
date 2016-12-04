@@ -3,6 +3,7 @@ function SingleController (UserService, $stateParams, $state) {
   let vm = this;
 
   vm.users = [];
+  vm.nearby = [];
   vm.remove = remove;
 
   function init () {
@@ -13,6 +14,16 @@ function SingleController (UserService, $stateParams, $state) {
   };
 
   init();
+
+  function nearby (user) {
+    UserService.getNearby(user).then(function (show){
+      vm.nearby = show.data;
+      console.log('nearby:')
+      console.log(show)
+    });
+  };
+
+  nearby();
 
   	function remove (user) {
         UserService.deleteUser(user).then(function (resp) {

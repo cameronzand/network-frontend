@@ -13,6 +13,7 @@ function UserService ($http, $cookies, $state) {
   this.postLoc = postLoc;
   this.getHeaders = getHeaders;
   this.deleteUser = deleteUser;
+  this.getNearby = getNearby;
 
   function create (user) {
     return $http.post(`${SERVER}/users`, user);
@@ -32,6 +33,10 @@ function UserService ($http, $cookies, $state) {
 
   function getUser (id) {
   	return $http.get(`${SERVER}/users/${id}`)
+  }
+
+  function getNearby (user) {
+    return $http.get(`${SERVER}/nearby`)
   }
 
   function setUser (data){
