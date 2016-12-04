@@ -33,11 +33,18 @@ function UserService ($http, $cookies, $state) {
 
   function getUser (id) {
   	return $http.get(`${SERVER}/users/${id}`)
-  }
+  };
 
   function getNearby (user) {
-    return $http.get(`${SERVER}/nearby`)
-  }
+      let request = {
+      url: `${SERVER}/nearby`,
+      //params: nearby,
+      method: 'GET',
+      headers: getHeaders()
+    };
+    return $http(request);
+    //return $http.get(`${SERVER}/nearby`)
+  };
 
   function setUser (data){
     $cookies.put('username', data.username);
