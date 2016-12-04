@@ -1,4 +1,6 @@
-<div class="form-login">
+<div class="background">
+
+<div class="form-reg">
   <form class="" name="new-info" ng-submit="register.createUser(user)">
     <p class="control">
       <input name="username" type="text" placeholder="User Name"
@@ -34,5 +36,7 @@
      </p>
 
     <button class="button is-primary">Register</button>
+    <div class="navspace2"><a href="#/login"
+    ng-show="!layout.loggedIn">Login</a></div>
   </form>
 </div> 

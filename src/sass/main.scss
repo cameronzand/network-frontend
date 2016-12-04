@@ -1,9 +1,26 @@
 @import 'bulma';
 
+
+.background {
+    background: url(/images/logo.jpg) no-repeat center center fixed;
+    font-family: 'Alice', serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 545px;
+    filter: blur(0px);
+}
+
 nav {
 	text-align: center;	
-	margin-top: 20px;
-	margin-bottom: 20px;
+	
+	font-size: 20px;
+    // border: solid 2px;
+    background: #294171;
+    color:white;
+    height: 60px;
+    padding-top: 13px;
 
 }
 
@@ -25,4 +42,61 @@ nav {
 .singleimage {
 	height: 200px;
 	width: 200px;
+}
+.MESH{
+	text-align: center;
+    height: 60px;
+    padding-top: 13px;
+    font-size: 20px;
+    // border: solid 2px;
+    background: #294171;
+    color:white;
+}
+.welcome{
+	text-align: center;
+    height: 85px;
+    padding-top: 25px;
+    font-size: 19px;
+}
+.form-login{
+    width: 235px;
+    height: 380px;
+    padding-top: 239px;
+    margin-left: 75px;
+}
+.input{
+	width: 235px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+button.button.is-primary{
+	width:230px;
+	    background-color: #294171;
+    border-width: 0;
+    color: white;
+
+}
+.navspace1{
+	padding-left: 90px;
+    padding-top: 4px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+a{
+	color:white;    
+}
+.form-reg {
+	margin: auto;
+    width: 360px;
+    margin-left:85px;
+}
+.navspace2{
+	padding-left: 90px;
+    padding-top: 4px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+img{
+	    width: 38px;
 }
