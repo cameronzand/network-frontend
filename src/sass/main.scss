@@ -80,7 +80,7 @@ button.button.is-primary{
 .navspace1{
 	padding-left: 90px;
     padding-top: 4px;
-    font-size: 12px;
+    font-size: 20px;
     text-decoration: underline;
 }
 a{
@@ -99,4 +99,79 @@ a{
 }
 img{
 	    width: 38px;
+}
+
+.slider{
+	height:350px;
+}
+.slide {
+	width: 20%;
+	float: left;
+}
+
+.slider img{
+	width: 100%;
+	float: left;
+}
+.slider{
+	position: relative;
+	width: 500%;
+	margin:0px;
+	left:0px;
+	animation: 80s slidy infinite;
+}
+@keyframes slidy{
+	0%{
+		left: 0%;
+	}
+	10%{
+		left: 0%;
+	}
+	12%{
+		left: -100%;
+	}
+	22%{
+		left: -100%;
+	}
+	24%{
+		left: -200%;
+	}
+	34%{
+		left: -200%;
+	}
+	36%{
+		left: -300%;
+	}
+	46%{
+		left: -300%;
+	}
+	48%{
+		left: -400%;
+	}
+	58%{
+		left: -400%;
+	}
+	60%{
+		left: -300%;
+	}
+	70%{
+		left: -300%;
+	}
+	72%{
+		left: -300%;
+	}
+	82%{
+		left: -200%;
+	}
+	84%{
+		left: -100%;
+	}
+	94%{
+		left: -100%;
+	}
+	96%{
+		left: 0%;
+	}
+
+
 }

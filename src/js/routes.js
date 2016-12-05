@@ -26,8 +26,12 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/users/:id',
 			templateUrl: 'templates/single.tpl.html',
 			controller: 'SingleController as single'
+		})
+.state('root.chat',{
+			url: '/users/',
+			templateUrl: 'templates/chat.tpl.html',
+			controller: 'ChatController as Chat'
 		});
-
 	$urlRouterProvider.otherwise('/');
 
 }
