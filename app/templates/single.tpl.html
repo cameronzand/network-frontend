@@ -5,7 +5,18 @@
 		{{single.user.email}} <br>
 		{{single.user.linkedin}} <br>
 		{{single.user.description}} <br><br>
-	</div>
-	{{single.nearby[0].user.name}}
+</div>
+<!-- 	<ul>
+		<li ng-repeat="nearby in single.nearby">
+
+	{{nearby.user.name}}
+
+
+
+		</li>
+	</ul> -->
+	
+	<a href="#/nearby" class="blue">{{single.nearby.length}} Nearby Users</a>
+
 <!-- 	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
 </div>

@@ -27,10 +27,10 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			templateUrl: 'templates/single.tpl.html',
 			controller: 'SingleController as single'
 		})
-.state('root.chat',{
-			url: '/users/',
-			templateUrl: 'templates/chat.tpl.html',
-			controller: 'ChatController as Chat'
+		.state('root.nearby',{
+			url: '/nearby',
+			templateUrl: 'templates/nearby.tpl.html',
+			controller: 'NearbyController as nearby'
 		});
 	$urlRouterProvider.otherwise('/');
 

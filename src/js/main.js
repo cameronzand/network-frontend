@@ -8,7 +8,7 @@ import { HomeController } from './controllers/HomeController';
 import { LoginController } from './controllers/LoginController';
 import { RegisterController } from './controllers/RegisterController';
 import { SingleController } from './controllers/SingleController';
-import { ChatController } from './controllers/ChatController';
+import { NearbyController } from './controllers/NearbyController';
 
 import { UserService } from './services/users';
 
@@ -24,6 +24,6 @@ angular
 	.controller('LoginController', LoginController)
 	.controller('RegisterController', RegisterController)
 	.controller('SingleController', SingleController)
-	.controller('ChatController', ChatController)
+	.controller('NearbyController', NearbyController)
 	.config(routerConfig)
 	.service ('UserService', UserService);

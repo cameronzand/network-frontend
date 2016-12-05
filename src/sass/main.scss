@@ -175,3 +175,38 @@ img{
 
 
 }
+
+.blue {
+	color: blue;
+}
+
+.nearbybox {
+	border-bottom: 1px solid grey;
+	padding: 20px;
+	overflow: scroll;
+}
+
+.nearbybox:hover {
+	background: #BEEFFE;
+}
+
+.nearbypic {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.name {
+	margin-left: 15px;
+}
+
+.nearbytitle {
+	font-size: 18px;
+	margin-left: 120px;
+	font-weight: bold;
+	
+}
+
+.comp {
+	margin-left: 15px;
+}
