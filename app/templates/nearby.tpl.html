@@ -1,0 +1,15 @@
+<h1 class="nearbytitle">Nearby Users</h1>
+<ul>
+	<li ng-repeat="nearby in nearby.nearby">
+	<div class="nearbybox">
+
+		<a href="#/users/{{ nearby.user.id }}" class="blue">
+		<img ng-src="{{nearby.user.img}}" class="nearbypic"/></a>"{{nearby.user.description}}"<br>
+		<span class="name"><a href="#/users/{{ nearby.user.id }}" class="blue">{{nearby.user.name}}</a></span><br>
+		<span class="comp">{{nearby.user.company}}</span>
+		
+	</div>
+	</li>
+</ul>
+
+<a href="#/login" class="blue">Go back</a>

@@ -5,6 +5,7 @@ function SingleController (UserService, $stateParams, $state) {
   vm.users = [];
   vm.nearby = [];
   vm.remove = remove;
+  vm.num = [];
 
   function init () {
     UserService.getUser($stateParams.id).then((resp) => {
@@ -16,11 +17,13 @@ function SingleController (UserService, $stateParams, $state) {
 
   init();
 
+
   function nearby (nearbyuser) {
     UserService.getNearby(nearbyuser).then(function (show){
       vm.nearby = show.data;
       console.log('nearby:')
       console.log(vm.nearby)
+
     });
   };
 
