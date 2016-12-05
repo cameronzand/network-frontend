@@ -31,8 +31,8 @@ function LayoutController (UserService, $rootScope, $state) {
 		console.log('there is geolation');
 	  navigator.geolocation.getCurrentPosition(position => {
 	  	let location = {};
-	  	location.latitude = position.coords.latitude;
-	  	location.longitude = position.coords.longitude;
+	  	location.lat = position.coords.latitude;
+	  	location.long = position.coords.longitude;
 	  	UserService.postLoc(location).then(function (data){
 	  		console.log(data);
 	  		console.log(location);
