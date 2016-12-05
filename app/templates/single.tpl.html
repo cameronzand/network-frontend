@@ -1,11 +1,21 @@
 <div class="singlewrapper">
 	<img ng-src="{{single.user.img}}" class="singleimage" />
+
+
+<div class="url" ><img src=images/url.png><a href="#/nearby" class="blue">{{single.nearby.length}}  </a>  </div>
+<a href="#/nearby" class="blue">{{single.nearby.length}} Nearby Users</a>
+
 	<div class="info">
-		{{single.user.name}} / {{single.user.company}} <br>
-		{{single.user.email}} <br>
-		{{single.user.linkedin}} <br>
-		{{single.user.description}} <br><br>
+		<div class="usersP">{{single.user.name}}</div>
+		<div class="emailP">{{single.user.email}}</div> 
+		<div>
+<div class="companyP">
+		{{single.user.company}} </div>
+		<div class="linkP">{{single.user.linkedin}} </div>
+		<div class >{{single.user.description}} </div>
 	</div>
-	{{single.nearby[0].user.name}}
+	
+	
 <!-- 	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
+</div>
 </div>

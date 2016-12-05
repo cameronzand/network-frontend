@@ -35,13 +35,15 @@ nav {
 }
 
 .singlewrapper {
-	margin: auto;
-	width: 50%
+	height:547px;
+	width: 100%;
+	overflow: scroll;
+	background: white;
 }
 
 .singleimage {
-	height: 200px;
-	width: 200px;
+	height: 300px;
+	width: 100%;
 }
 .MESH{
 	text-align: center;
@@ -174,4 +176,19 @@ img{
 	}
 
 
+}
+
+.usersP{
+	font-size:30px;
+}
+.emailP{
+	font-size:17px;
+}
+.userwrapper{
+	border: solid;
+    width: 55px;
+    border-radius: 3px;
+    position: absolute;
+    right: 148px;
+    top: 270px;
 }
