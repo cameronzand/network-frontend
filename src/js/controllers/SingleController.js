@@ -9,17 +9,18 @@ function SingleController (UserService, $stateParams, $state) {
   function init () {
     UserService.getUser($stateParams.id).then((resp) => {
       vm.user = resp.data;
-      //console.log(resp)
+      console.log('singleuser:')
+      console.log(resp)
     });
   };
 
   init();
 
-  function nearby (user) {
-    UserService.getNearby(user).then(function (show){
+  function nearby (nearbyuser) {
+    UserService.getNearby(nearbyuser).then(function (show){
       vm.nearby = show.data;
       console.log('nearby:')
-      console.log(show)
+      console.log(vm.nearby)
     });
   };
 

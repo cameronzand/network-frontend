@@ -35,7 +35,7 @@ function UserService ($http, $cookies, $state) {
   	return $http.get(`${SERVER}/users/${id}`)
   };
 
-  function getNearby (user) {
+  function getNearby (nearbyuser) {
       let request = {
       url: `${SERVER}/nearby`,
       //params: nearby,
