@@ -9,8 +9,8 @@ function SingleController (UserService, $stateParams, $state) {
   function init () {
     UserService.getUser($stateParams.id).then((resp) => {
       vm.user = resp.data;
-      console.log('singleuser:')
-      console.log(resp)
+      //console.log('singleuser:')
+      //console.log(resp)
     });
   };
 
