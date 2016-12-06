@@ -2,7 +2,7 @@
 function LoginController ($state, UserService, $rootScope) {
 
   let vm = this;
-  console.log('hi')
+  //console.log('hi')
 
   vm.activate = activate;
 
