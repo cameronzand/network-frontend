@@ -1,16 +1,23 @@
-function LayoutController (UserService, $rootScope, $state) {
+function LayoutController (UserService, $rootScope, $state, $cookies) {
 
   let vm = this;
 
   vm.loggedIn = UserService.isLoggedIn();
   vm.logout = logout;
   vm.internalId = null; 
+  vm.user_id = $cookies.get('user_id');
+  // vm.img = $cookies.get('img');
 
   $rootScope.$on('loginChange', (event, data) => {
     vm.loggedIn = UserService.isLoggedIn();
+    vm.user_id = $cookies.get('user_id');
+    // vm.img = $cookies.get('img');
     console.log(vm.loggedIn)
     startUpdates()
   });
+
+ // console.log('userID:', vm.user_id);
+ // console.log('img:', vm.img);
 
   function logout () {
   	UserService.logout();
@@ -51,7 +58,7 @@ function LayoutController (UserService, $rootScope, $state) {
 
 };
 
-LayoutController.$inject = ['UserService', '$rootScope', '$state'];
+LayoutController.$inject = ['UserService', '$rootScope', '$state', '$cookies'];
 
 
 

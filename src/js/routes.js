@@ -31,6 +31,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/nearby',
 			templateUrl: 'templates/nearby.tpl.html',
 			controller: 'NearbyController as nearby'
+		})
+		.state('root.message',{
+			url: '/message/:id',
+			templateUrl: 'templates/message.tpl.html',
+			controller: 'MessageController as message'
 		});
 	$urlRouterProvider.otherwise('/');
 

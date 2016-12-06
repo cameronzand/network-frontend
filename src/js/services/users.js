@@ -14,6 +14,17 @@ function UserService ($http, $cookies, $state) {
   this.getHeaders = getHeaders;
   this.deleteUser = deleteUser;
   this.getNearby = getNearby;
+  this.postMessage = postMessage;
+
+  function postMessage (message) {
+      let req = {
+      url: `${SERVER}/messages/${user.id}`,
+      //params: nearby,
+      method: 'POST',
+      headers: getHeaders()
+    };
+    return $http(req);
+  };
 
   function create (user) {
     return $http.post(`${SERVER}/users`, user);
@@ -49,11 +60,15 @@ function UserService ($http, $cookies, $state) {
   function setUser (data){
     $cookies.put('username', data.username);
     $cookies.put('access_token', data.access_token);
+    $cookies.put('user_id', data.id);
+    $cookies.put('img', data.img);
   }
 
   function logout () {
     $cookies.remove('username');
     $cookies.remove('access_token');
+    $cookies.remove('user_id');
+    $cookies.remove('img');
     console.log('state is: ', $state.current.name);
     // $state.go('root.login');
     console.log('now state is: ', $state.current.name);
