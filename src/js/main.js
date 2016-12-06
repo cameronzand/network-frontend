@@ -9,6 +9,7 @@ import { LoginController } from './controllers/LoginController';
 import { RegisterController } from './controllers/RegisterController';
 import { SingleController } from './controllers/SingleController';
 import { NearbyController } from './controllers/NearbyController';
+import { MessageController } from './controllers/MessageController';
 
 import { UserService } from './services/users';
 
@@ -25,5 +26,6 @@ angular
 	.controller('RegisterController', RegisterController)
 	.controller('SingleController', SingleController)
 	.controller('NearbyController', NearbyController)
+	.controller('MessageController', MessageController)
 	.config(routerConfig)
 	.service ('UserService', UserService);
