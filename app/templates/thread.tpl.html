@@ -1,10 +1,10 @@
 <ul>
-	<li ng-repeat="data in thread.thread">
+	<li ng-repeat="data in thread.thread.users">
 		<div class="">
 
 
-			<a href="#/message/{{ thread.recipient_id }}" class="blue2"> 
-			{{ data.users.name }} 
+			<a href="#/message/{{ data.id }}" class="blue2"> 
+			{{ data.name }} 
 			</a>
 
 
