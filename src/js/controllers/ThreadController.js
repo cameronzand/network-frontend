@@ -1,4 +1,4 @@
-function ThreadController (UserService, $stateParams) {
+function ThreadController (UserService) {
 
 	console.log('threadcontroller');
 
@@ -20,5 +20,5 @@ function ThreadController (UserService, $stateParams) {
 
 };
 
-ThreadController.$inject = ['UserService', '$stateParams'];
+ThreadController.$inject = ['UserService'];
 export { ThreadController };
