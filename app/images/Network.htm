@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:8088/#/thread -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Network</title>
+    <link rel="stylesheet" href="./Network_files/normalize.css">
+    <link rel="stylesheet" href="./Network_files/main.css">
+  </head>
+  <body ng-app="app" class="ng-scope"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.2.11.2.js'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Network_files/browser-sync-client.2.11.2.js"></script>
+
+  <h1 class="MESH"> Mesh Network</h1>
+    <!-- uiView: --><div class="container ng-scope" ui-view="">
+<!-- uiView: --><div class="main-content ng-scope" ui-view=""><ul class="ng-scope">
+	<!-- ngRepeat: data in thread.users -->
+</ul>
+
+<!-- {{thread.thread.users[0].name}} --></div>
+<nav class="ng-scope">
+	<span class="navspace white"><a href="http://localhost:8088/#/"><img src="./Network_files/home.png"></a></span>
+	<span class="navspace white"><a href="http://localhost:8088/#/login" ng-show="!layout.loggedIn" class="ng-hide">Login</a></span>
+	<span class="navspace white"><a href="http://localhost:8088/#/register" ng-show="!layout.loggedIn" class="ng-hide">Register</a></span>
+	<span class="navspace white"><a href="http://localhost:8088/#/login" ng-show="layout.loggedIn" ng-click="layout.logout()">Logout</a></span>
+	<span class="navspace white"><a href="http://localhost:8088/#/users/45" ng-show="layout.loggedIn"><img ng-src="images/profilepic.png" class="circlesmall" src="./Network_files/profilepic.png"></a></span>
+
+			<span class="navspace white"><a href="http://localhost:8088/#/message/45" ng-show="layout.loggedIn">message</a></span>
+		<!-- <img ng-src="{{layout.img}}" / class="circlesmall"> -->
+
+<!-- 		<span class="navspace"><a href="#/login"
+		ng-show="layout.loggedIn"
+		ng-click="layout.logout()">Chat</a> -->
+</nav>
+
+</div>
+    <script src="./Network_files/bundle.js"></script>
+  
+
+</body></html>
