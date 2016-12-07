@@ -7,19 +7,18 @@ function MessageController (UserService, $stateParams) {
 	vm.getConvo = getConvo;
   	vm.postComment = postComment;
 	vm.messages = [];
-	vm.postmessages = [];
+	vm.content = '';
 
 
-	function postComment (message) {
+	function postComment () {
+	  console.log(vm.content);
       let user_id = $stateParams.id
-    	UserService.postComment(message, user_id).then(function (show){
-      	vm.postmessages = show.data;
-      		console.log('message:')
-      		console.log(vm.messages)
+    	UserService.postComment(vm.content, user_id).then(function (resp){
+    		console.log(resp.data);
+    		// add the new message to messages
+    		vm.messages.push(resp.data);
         });
     };
-
-     postComment();
 
 	function getConvo (message) {
     let user_id = $stateParams.id

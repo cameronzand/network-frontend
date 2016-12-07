@@ -1,16 +1,16 @@
 <ul>
-	<li ng-repeat="message in message.messages">
+	<li ng-repeat="mail in message.messages">
 		<div class="">
 
 
-			{{message.content}}
+			{{mail.content}}
 
 
    		</div>
    </li>
 </ul>
 
-<form ng-submit="message.postComment(message)">
-<input class="comment-input" type="text" placeholder="Message..." ng-model="message.comment"/></input>
+<form ng-submit="message.postComment()">
+<input class="comment-input" type="text" placeholder="Message..." ng-model="message.content"/></input>
 <button class="button comment-button">+</button>
 </form>

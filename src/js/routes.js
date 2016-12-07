@@ -36,6 +36,7 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/message/:id',
 			templateUrl: 'templates/message.tpl.html',
 			controller: 'MessageController as message'
+			// $scope.message = new MessageController()
 		})
 		.state('root.thread',{
 			url: '/thread',
