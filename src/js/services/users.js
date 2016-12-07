@@ -21,7 +21,7 @@ function UserService ($http, $cookies, $state) {
   function getThread () {
       let req = {
       url: `${SERVER}/threads`,
-      //params: nearby,
+      
       method: 'GET',
       headers: getHeaders()
     };
