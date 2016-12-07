@@ -1,9 +1,16 @@
-<li ng-repeat="nearby in nearby.nearby">
-	<div class="nearbybox">
-   {{message.user.id}}
+<ul>
+	<li ng-repeat="message in message.messages">
+		<div class="">
 
 
+			{{message.content}}
 
 
-   </div>
+   		</div>
    </li>
+</ul>
+
+<form ng-submit="message.postComment(message)">
+<input class="comment-input" type="text" placeholder="Message..." ng-model="message.comment"/></input>
+<button class="button comment-button">+</button>
+</form>

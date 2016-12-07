@@ -36,6 +36,11 @@ function routerConfig ($stateProvider, $urlRouterProvider) {
 			url: '/message/:id',
 			templateUrl: 'templates/message.tpl.html',
 			controller: 'MessageController as message'
+		})
+		.state('root.thread',{
+			url: '/thread',
+			templateUrl: 'templates/thread.tpl.html',
+			controller: 'ThreadController as thread'
 		});
 	$urlRouterProvider.otherwise('/');
 
