@@ -189,15 +189,16 @@ img{
 
 .blue {
 	color: lightgrey;
-	float: right;
-    padding-right: 15px;
-    font-size: 35px;
+	
+    // padding-right: 15px;
+    // font-size: 35px;
+    // border:solid;
 }
 
 .nearbybox {
 	border-bottom: 1px solid grey;
 	padding: 20px;
-	overflow: scroll;
+	
 }
 
 .nearbybox:hover {
@@ -215,14 +216,14 @@ img{
 }
 
 .nearbytitle {
-	font-size: 18px;
-	margin-left: 120px;
-	font-weight: bold;
+	// font-size: 18px;
+	// margin-left: 120px;
+	// font-weight: bold;
 	
 }
 
 .comp {
-	margin-left: 15px;
+	// margin-left: 15px;
 }
 .usersP{
 	position: absolute;
@@ -277,4 +278,18 @@ img{
     border-radius: 3px;
     font-size: 25px;
 
+}
+.nearbywrapper.ng-scope{
+	height: 581px;
+	overflow:scroll;
+    
+}
+div.main-content.ng-scope{
+    height: 546px;
+}
+div.nborder{
+border:solid 1px;
+border-radius: 2px;
+padding-top: 15px;
+overflow:scroll;
 }
