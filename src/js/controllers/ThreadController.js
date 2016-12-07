@@ -5,6 +5,7 @@ function ThreadController (UserService) {
 	let vm = this;
 
 	vm.thread = {};
+	
 
 
 

@@ -1,13 +1,22 @@
-function MessageController (UserService, $stateParams) {
+function MessageController (UserService, $stateParams, $rootScope) {
+
+  getConvo();
 
 	console.log('messagecontroller');
 
 	let vm = this;
 
 	vm.getConvo = getConvo;
-  	vm.postComment = postComment;
+  vm.postComment = postComment;
 	vm.messages = [];
 	vm.content = '';
+  vm.intervalId = setInterval(getConvo, 3000);
+
+  $rootScope.$on('$stateChangeStart', (event, toState) => {
+
+    clearInterval(vm.intervalId);
+
+  });
 
 
 	function postComment () {
@@ -29,9 +38,8 @@ function MessageController (UserService, $stateParams) {
     });
 };
 
-	getConvo();
-
+	
 };
 
-MessageController.$inject = ['UserService', '$stateParams'];
+MessageController.$inject = ['UserService', '$stateParams', '$rootScope'];
 export { MessageController };
