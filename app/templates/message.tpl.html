@@ -1,9 +1,12 @@
-<li ng-repeat="nearby in nearby.nearby">
-	<div class="nearbybox">
-   {{message.user.id}}
+<ul>
+	<li ng-repeat="message in message.messages">
+		<div class="nearbyboxx">
 
 
+			{{message.content}}
 
 
-   </div>
+   		</div>
    </li>
+</ul>
+<!--       {{message.messages[0].content}} -->

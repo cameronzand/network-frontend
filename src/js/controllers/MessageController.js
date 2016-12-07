@@ -26,7 +26,7 @@ function MessageController (UserService, $stateParams) {
 		UserService.getConvo(message, user_id).then(function (show){
   		vm.messages = show.data;
   			console.log('GetMessage:')
-  			console.log(show)
+  			console.log(show.data)
     });
 };
 
