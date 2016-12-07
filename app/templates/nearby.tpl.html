@@ -22,6 +22,6 @@
 <div class="nearbywrapper">
 <div class="nborder" ng-repeat="nearby in nearby.nearby">
 <div><a href="#/users/{{ nearby.user.id }}" class="blue"><img ng-src="{{nearby.user.img}}" class="nearbypic"/></a></div>
-<h1 class="nearbytitle">Nearby Users</h1>
+<a href="#/message/{{ nearby.user.id }}" class="blue2">Message Me</a>
 
 </div>
