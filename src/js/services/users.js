@@ -16,12 +16,26 @@ function UserService ($http, $cookies, $state) {
   this.getNearby = getNearby;
   this.postComment = postComment;
   this.getConvo = getConvo;
+  this.getThread = getThread;
 
-
-  function postComment (message, id) {
+  function getThread () {
       let req = {
-      url: `${SERVER}/messages/${id}`,
-      //params: message,
+      url: `${SERVER}/threads`,
+      //params: nearby,
+      method: 'GET',
+      headers: getHeaders()
+    };
+    return $http(req);
+
+  };
+
+  function postComment (message, user_id) {
+      let req = {
+      url: `${SERVER}/messages`,
+      data: {
+        content: message,
+        recipient_id: user_id
+      },
       method: 'POST',
       headers: getHeaders()
     };

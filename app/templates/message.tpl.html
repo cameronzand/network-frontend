@@ -1,6 +1,6 @@
 <ul>
 	<li ng-repeat="message in message.messages">
-		<div class="nearbyboxx">
+		<div class="">
 
 
 			{{message.content}}
@@ -9,4 +9,8 @@
    		</div>
    </li>
 </ul>
-<!--       {{message.messages[0].content}} -->
+
+<form ng-submit="message.postComment(message)">
+<input class="comment-input" type="text" placeholder="Message..." ng-model="message.comment"/></input>
+<button class="button comment-button">+</button>
+</form>
