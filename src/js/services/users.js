@@ -15,12 +15,23 @@ function UserService ($http, $cookies, $state) {
   this.deleteUser = deleteUser;
   this.getNearby = getNearby;
   this.postMessage = postMessage;
+  this.getMessage = getMessage;
 
   function postMessage (message) {
       let req = {
-      url: `${SERVER}/messages/${user.id}`,
-      //params: nearby,
+      url: `${SERVER}/messages`,
+      //params: message,
       method: 'POST',
+      headers: getHeaders()
+    };
+    return $http(req);
+  };
+
+    function getMessage (message) {
+      let req = {
+      url: `${SERVER}/messages/${user.friend_id}`,
+      //params: nearby,
+      method: 'GET',
       headers: getHeaders()
     };
     return $http(req);
