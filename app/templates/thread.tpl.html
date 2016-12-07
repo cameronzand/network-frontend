@@ -1,11 +1,13 @@
 <ul>
-	<li ng-repeat="thread in thread.thread">
-		<div class="">
+    <li ng-repeat="data in thread.thread">
+        <div class="">
 
 
-			{{thread.name}}
+            <a href="#/message/{{ thread.recipient_id }}" class="blue2"> 
+            {{ data.users.data.name }} 
+            </a>
 
 
-   		</div>
-   </li>
+          </div>
+  </li>
 </ul>
