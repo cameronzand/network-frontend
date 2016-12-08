@@ -302,3 +302,25 @@ overflow:scroll;
 .blue2 {
 	color: blue;
 }
+
+.threadpic {
+	border-radius: 50%;
+	//display: inline-block;
+
+}
+
+.threadname {
+	position: absolute;
+	margin-left: 12px;
+	margin-top: 10px;
+}
+
+.threaddiv {
+	margin-top:5px;
+	margin-left: 5px;
+}
+
+.threadheader {
+	margin-left: 130px;
+	font-weight: bold;
+}
