@@ -25,7 +25,6 @@ function MessageController (UserService, $stateParams, $rootScope) {
       let user_id = $stateParams.id
     	UserService.postComment(vm.content, user_id).then(function (resp){
     		console.log("This is da data" ,  resp.data);
-    		// add the new message to messages
     		vm.messages.push(resp.data);
 
         });
