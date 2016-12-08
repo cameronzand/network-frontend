@@ -20,7 +20,7 @@ import 'angular-ui-router';
 import 'angular-cookies';
 
 angular 
-	.module('app', ['ui.router', 'ngCookies',])
+	.module('app', ['ui.router', 'ngCookies'])
 	.controller('LayoutController', LayoutController)
 	.controller('HomeController', HomeController)
 	.controller('LoginController', LoginController)

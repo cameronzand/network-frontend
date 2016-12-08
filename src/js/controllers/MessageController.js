@@ -12,6 +12,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
 	vm.content = '';
   vm.intervalId = setInterval(getConvo, 3000);
 
+
   $rootScope.$on('$stateChangeStart', (event, toState) => {
 
     clearInterval(vm.intervalId);
@@ -26,7 +27,9 @@ function MessageController (UserService, $stateParams, $rootScope) {
     		console.log(resp.data);
     		// add the new message to messages
     		vm.messages.push(resp.data);
+
         });
+      vm.content = '';
     };
 
 	function getConvo (message) {
