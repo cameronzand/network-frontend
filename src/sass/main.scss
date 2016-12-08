@@ -42,14 +42,13 @@ nav {
 }
 
 .singleimage {
-    height: 205px;
-    width: 55%;
-    border-radius: 163px;
+    width: 36%;
     border: solid;
-    border-color: #f2f3f6;
+    height: 142%
+     
+
   
-    right: 96px;
-    bottom: 375px;
+
 }
 .MESH{
 	text-align: center;
@@ -229,15 +228,15 @@ img{
 	
     bottom: 435px;
     left: 149px;
-	font-size:20px;
-	color: white;	
+	font-size:30px;
+	color: black;	
 }
 .emailP{
     
     bottom: 412px;
     left: 123px;
-    font-size: 15px;
-    color: white;	
+    font-size: 20px;
+    color: black;	
 
 }
 .userwrapper{
@@ -249,9 +248,35 @@ img{
     top: 270px;
 }
 
-.cont{
-	height: 290px;
+.singleimage4{
+	border: 1px solid white;
+	margin-right: 4px;
+    margin-left: 3px;
+}
+.singlecont{
+	height: 305px;
 	background: #47A2C2;
+	width: 100%;
+	width: 100%;
+background: url(/images/22.jpg) no-repeat center center fixed;
+    font-family: 'Alice', serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+.singlecont1{
+	border:solid;
+	height:115px;
+	background: url(/images/22.jpg) no-repeat center center fixed;
+    font-family: 'Alice', serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   
 }
 .url{
 	position: absolute;
@@ -271,9 +296,23 @@ img{
 .1{
     font-size: 22px;
 }
-.cont2{
+.imgcont{
+	
+	height: 135px;
+	width: 130%;
+}
+.singlecont2{
+
 	width: 375px;
-    margin-left: 88px;
+    margin-left: 8px;
+    padding-top: 17px;
+
+}
+.singlecont3{
+    float: right;
+    height: 38px;
+    width: 61%;
+    margin-top: 88px;
 
 }
 .closeusers{
@@ -323,4 +362,36 @@ overflow:scroll;
 .threadheader {
 	margin-left: 130px;
 	font-weight: bold;
+}
+.innerbox1{
+	float: right;
+    border: solid;
+    width: 22%;
+    height: 39px;
+}
+.comp{
+	
+	height:65px;
+	margin-top:8px;
+
+
+}
+
+   
+.comp3{
+    width: 100%;
+    height: 102%;
+    border: solid;
+    margin: 0%;
+    text-align: center;
+    padding-top: 15px;
+    border-radius:5px;
+    background: rgb(66, 184, 221);
+    
+}
+.comp4{
+	border:solid;
+	height:25%;
+	margin-top:8px;
+	border-radius: 3px;
 }
