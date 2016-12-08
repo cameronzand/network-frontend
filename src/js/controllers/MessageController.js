@@ -24,7 +24,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
 	  console.log(vm.content);
       let user_id = $stateParams.id
     	UserService.postComment(vm.content, user_id).then(function (resp){
-    		console.log(resp.data);
+    		console.log("This is da data" ,  resp.data);
     		// add the new message to messages
     		vm.messages.push(resp.data);
 
@@ -35,7 +35,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
 	function getConvo (message) {
     let user_id = $stateParams.id
 		UserService.getConvo(message, user_id).then(function (show){
-  		vm.messages = show.data;
+  		vm.messages = show.data.reverse();
   			console.log('GetMessage:')
   			console.log(show.data)
     });
