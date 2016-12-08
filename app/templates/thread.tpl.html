@@ -1,17 +1,21 @@
+<h1 class="threadheader">Chat Threads</h1>
+
+<div>
 <ul>
 	<li ng-repeat="data in thread.thread.users">
 
-		<div class="">
-		<div class="img1"><img ng-src="{{data.img}}" class="nearbypic"/></a></div>
+		
+			<div class="threaddiv">
+			<a href="#/message/{{ data.id }}" class="blue2"> <img ng-src="{{data.img}}" class="threadpic"/>
+			<span class="threadname">{{ data.name }} </a></span>
+			</div>
 
 
-			<a href="#/message/{{ data.id }}" class="blue2"> 
-			{{ data.name }} 
-			</a>
+		
 
 
-   		</div>
+   		
    </li>
 </ul>
-
+</div>
 <!-- {{thread.thread.users[0].name}} -->
