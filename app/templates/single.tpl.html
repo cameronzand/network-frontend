@@ -1,4 +1,57 @@
 <div class="singlewrapper">
+<div class="singlecont">
+     <div class = "singlecont1">
+		    <div class = "singlecont2">
+			    <div class="usersP">{{single.user.name}}</div>
+				<div class="emailP">{{single.user.email}}</div> 
+			</div>
+        </div>
+    <div class = "imgcont">
+       
+       <div class = "singlecont3">
+       	<img ng-src="{{nearbyUser.user.img}}" class="singleimage4" ng-repeat="nearbyUser in single.nearby"/><div class="innerbox1">{{single.nearby.length}}</div>
+       </div>
+       <img ng-src="{{single.user.img}}" class="singleimage"/>
+   </div>
+</div>
+Company
+	<div class ="comp">
+
+	
+    <button class ="comp3">{{single.nearby.length}}
+    Nearby Connections
+     </button>
+
+</div>
+
+<div class="comp4">About Me:<div>{{single.user.description}}</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="url" ><a href="#/nearby" class="blue1">{{single.nearby.length}}  </a> </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="singlewrapper">
  	<div class="cont">
 	   <div class = "cont1">
 	   <div class ="contbox">
@@ -28,6 +81,6 @@
 			<div class >{{single.user.description}} </div>
 		
 		
-	<!-- 	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
+	<!-	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
 	
-</div>
+<!-- </div> --> 
