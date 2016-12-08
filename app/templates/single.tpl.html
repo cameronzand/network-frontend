@@ -1,32 +1,33 @@
 <div class="singlewrapper">
-<div class="cont">
-<div class="cont2">
-	<img ng-src="{{single.user.img}}" class="singleimage" />
-	<div class="usersP">{{single.user.name}}</div>
-	<div class="emailP">{{single.user.email}}</div> 
-	<div class="url" ><a href="#/nearby" class="blue1">{{single.nearby.length}}  </a> 
-	</div>
-	 </div>
-	</div>
-	<div class="singlewrapper">
-
-
-
-<div class="closeusers"><span class="1">Nearby Users</span><a href="#/nearby" class="blue">{{single.nearby.length}} </a></div>
-
-	<div class="info">
-		<div class="usersP">{{single.user.name}}</div>
-		<div class="emailP">{{single.user.email}} <br>
-		{{single.user.number}}	
+ 	<div class="cont">
+	   <div class = "cont1">
+	   <div class ="contbox">
+			<img ng-src="{{single.user.img}}" class="singleimage" />
+			<div class="usersP">{{single.user.name}}</div>
+			<div class="emailP">{{single.user.email}}</div> 
+			<div class="url" ><a href="#/nearby" class="blue1">{{single.nearby.length}}  </a> </div>
 		</div>
+	 </div>
+	 </div>
 
-		<div>
-<div class="companyP">
-		{{single.user.company}} </div>
-		<div class="linkP">{{single.user.linkedin}} </div>
-		<div class >{{single.user.description}} </div>
-	</div>
-	
-<!-- 	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
+
+
+<div class="closeusers">
+    <span class="1">Nearby Users</span>
+    <a href="#/nearby" class="blue">{{single.nearby.length}} </a>
 </div>
+
+		<div class="info">
+			<div class="usersP">{{single.user.name}}</div>
+		    <div class="emailP">{{single.user.email}}
+			{{single.user.number}}	</div>
+        </div>
+
+<div class="companyP">{{single.user.company}} </div>
+			<div class="linkP">{{single.user.linkedin}} </div>
+			<div class >{{single.user.description}} </div>
+		
+		
+	<!-- 	<button class="remove" ng-click="single.remove(single.user)">Delete Profile</button> -->
+	
 </div>
