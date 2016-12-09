@@ -8,7 +8,10 @@ function SingleController (UserService, $stateParams, $state, NgMap) {
   vm.num = [];
 
 
-  NgMap.getMap(googlemap);
+  NgMap.getMap(googlemap).then(function(map){
+    console.log(map)
+    vm.map = map;
+  });
 
   function init () {
     UserService.getUser($stateParams.id).then((resp) => {
@@ -23,12 +26,29 @@ function SingleController (UserService, $stateParams, $state, NgMap) {
 
   function nearby (nearbyuser) {
     UserService.getNearby(nearbyuser).then(function (show){
-      vm.nearby = show.data;
+      vm.nearby = show.data;  
+      NgMap.getMap(googlemap).then(function(map){
+        vm.map = map;
+        vm.nearby.forEach(function(user){
+        loadMarker(user.location)
+        })
+      });
       console.log('nearby:')
       console.log(vm.nearby)
 
     });
   };
+
+
+function loadMarker(person){
+  let position = new google.maps.LatLng(person.lat, person.long)
+  var marker = new google.maps.Marker({
+      map: vm.map,
+      position: position,
+      draggable: false
+  });
+  console.log(marker)
+}
 
   nearby();
 
