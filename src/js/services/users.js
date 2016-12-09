@@ -1,5 +1,6 @@
 
-import { SERVER } from '../server';
+import { SERVER, eventServer, Token } from '../server';
+
 
 function UserService ($http, $cookies, $state) {
 
@@ -17,6 +18,7 @@ function UserService ($http, $cookies, $state) {
   this.postComment = postComment;
   this.getConvo = getConvo;
   this.getThread = getThread;
+  this.getEvents = getEvents;
 
   function getThread () {
       let req = {
@@ -71,6 +73,14 @@ function UserService ($http, $cookies, $state) {
   function getUser (id) {
   	return $http.get(`${SERVER}/users/${id}`)
   };
+  function getEvents () {
+    // let location = {
+    //   latitude: 
+    //   longitude:
+    // }
+    return $http.get(`${eventServer}/events/?token=${Token}`)
+    // return $http.get(`${eventServer}/events/search/`, { token: Token })
+  }
 
   function getNearby (nearbyuser) {
       let request = {
