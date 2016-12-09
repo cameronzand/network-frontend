@@ -42,11 +42,9 @@ nav {
 }
 
 .singleimage {
-    width: 36%;
+    width: 100%;
     border: solid;
-    height: 142%
-     
-
+    height: 349%;
   
 
 }
@@ -229,14 +227,14 @@ img{
     bottom: 435px;
     left: 149px;
 	font-size:30px;
-	color: black;	
+	color: black;
+	font-size: 25px;	
 }
-.emailP{
-    
-    bottom: 412px;
-    left: 123px;
-    font-size: 20px;
-    color: black;	
+.email{
+    color:grey;
+
+  
+    	
 
 }
 .userwrapper{
@@ -244,20 +242,23 @@ img{
     width: 55px;
     border-radius: 3px;
   
-    right: 148px;
-    top: 270px;
+   
 }
 
 .singleimage4{
-	border: 1px solid white;
-	margin-right: 4px;
+	border: 3px solid white;
+    margin-right: 20px;
     margin-left: 3px;
+    width: 20%;
+    border-radius: 56px;
+    border-color: black;
+    height: 60%;
 }
 .singlecont{
-	height: 305px;
+	height: 47%;
 	background: #47A2C2;
 	width: 100%;
-	width: 100%;
+	
 background: url(/images/22.jpg) no-repeat center center fixed;
     font-family: 'Alice', serif;
     -webkit-background-size: cover;
@@ -298,21 +299,24 @@ background: url(/images/22.jpg) no-repeat center center fixed;
 }
 .imgcont{
 	
-	height: 135px;
-	width: 130%;
+    height: 100px;
+    width: 100%;
 }
 .singlecont2{
 
 	width: 375px;
-    margin-left: 8px;
-    padding-top: 17px;
+    margin-left: 0px; 
+    margin-top: 86px;
+
 
 }
 .singlecont3{
     float: right;
-    height: 38px;
-    width: 61%;
-    margin-top: 88px;
+    height: 139%;
+    width: 64%;
+    margin-top: 0px;
+    border: solid;
+
 
 }
 .closeusers{
@@ -385,8 +389,11 @@ overflow:scroll;
     margin: 0%;
     text-align: center;
     padding-top: 15px;
-    border-radius:5px;
-    background: rgb(66, 184, 221);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    font-size: 28px;
+    color: #294171;
+    border: solid;
     
 }
 .comp4{
@@ -394,4 +401,23 @@ overflow:scroll;
 	height:25%;
 	margin-top:8px;
 	border-radius: 3px;
+}
+.nearP{
+	height:20%;
+	margin-top:6px;
+	overflow:hiddin;
+
+}
+
+.about{
+	margin-top: 18px;
+	border-bottom:solid 1px;
+	font-size:17px;
+}
+h1{
+	color:black;
+	padding-top:3px;
+}
+.u{
+	float: right;
 }

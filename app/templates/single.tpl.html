@@ -1,34 +1,54 @@
 <div class="singlewrapper">
 <div class="singlecont">
-     <div class = "singlecont1">
+     <!-- <div class = "singlecont1">
 		    <div class = "singlecont2">
-			    <div class="usersP">{{single.user.name}}</div>
+			    <div class="usersP">{{single.user.username}}</div>
 				<div class="emailP">{{single.user.email}}</div> 
 			</div>
-        </div>
+        </div> -->
     <div class = "imgcont">
        
-       <div class = "singlecont3">
-       	<img ng-src="{{nearbyUser.user.img}}" class="singleimage4" ng-repeat="nearbyUser in single.nearby"/><div class="innerbox1">{{single.nearby.length}}</div>
+       <div class = "singlecont6">
+       	
        </div>
+       
        <img ng-src="{{single.user.img}}" class="singleimage"/>
    </div>
 </div>
-Company
+<div class = "singlecont2">
+			    <div class="usersP">{{single.user.username}},{{single.user.age}}</div>
+
+
+				<div class="emailP">{{single.nearby.length}} Nearby Users</div> 
+			</div>
+<div class = "about">
+<h1>About Me</h1>
+<div class="h" >{{single.user.description}} </div>
+<h1>Email:<h1><span class="email">{{single.user.email}}</span>
+<h1>linkedin:</h1><p>{{single.user.linkedin-url}}</p>
+</div>
+	
+
+
 	<div class ="comp">
 
+
 	
-    <button class ="comp3">{{single.nearby.length}}
-    Nearby Connections
+    <button class ="comp3">{{single.nearby.length}} Nearby Conections  
      </button>
 
 </div>
 
-<div class="comp4">About Me:<div>{{single.user.description}}</div>
+<div class = "nearP">
+<img ng-src="{{nearbyUser.user.img}}" class="singleimage4" ng-repeat="nearbyUser in single.nearby"/>
+<div>
+
+
+
+
 
 </div>
 </div>
-
 
 
 
