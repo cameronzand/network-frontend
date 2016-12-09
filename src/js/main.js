@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'ngMap';
 
 
 
@@ -20,7 +21,7 @@ import 'angular-ui-router';
 import 'angular-cookies';
 
 angular 
-	.module('app', ['ui.router', 'ngCookies'])
+	.module('app', ['ui.router', 'ngCookies', 'ngMap'])
 	.controller('LayoutController', LayoutController)
 	.controller('HomeController', HomeController)
 	.controller('LoginController', LoginController)

@@ -1,4 +1,4 @@
-function SingleController (UserService, $stateParams, $state) {
+function SingleController (UserService, $stateParams, $state, NgMap) {
 
   let vm = this;
 
@@ -7,11 +7,14 @@ function SingleController (UserService, $stateParams, $state) {
   vm.remove = remove;
   vm.num = [];
 
+
+  NgMap.getMap(googlemap);
+
   function init () {
     UserService.getUser($stateParams.id).then((resp) => {
       vm.user = resp.data;
-      //console.log('singleuser:')
-      //console.log(resp)
+      console.log('singleuser:')
+      console.log(resp)
     });
   };
 
@@ -43,5 +46,5 @@ function SingleController (UserService, $stateParams, $state) {
 
 }
 
-SingleController.$inject = ['UserService', '$stateParams', '$state'];
+SingleController.$inject = ['UserService', '$stateParams', '$state', 'NgMap'];
 export { SingleController };
