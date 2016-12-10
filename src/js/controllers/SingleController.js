@@ -45,9 +45,13 @@ function loadMarker(person){
   var marker = new google.maps.Marker({
       map: vm.map,
       position: position,
+      scrollwheel: false,
       draggable: false
   });
-  console.log(marker)
+  vm.map.setZoom(7);
+  vm.map.panTo(marker.position);
+  
+  console.log('marker:', marker)
 }
 
   nearby();
