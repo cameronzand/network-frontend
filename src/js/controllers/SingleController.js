@@ -49,10 +49,14 @@ function loadMarker(person){
 //console.log('img:', vm.nearby[0].user.img)
   let position = new google.maps.LatLng(person.lat, person.long)
 
+  var image = {
+        url: vm.image, // image is 512 x 512
+        scaledSize : new google.maps.Size(22, 32)
+  };
   var marker = new google.maps.Marker({
       map: vm.map,
       position: position,
-      icon: vm.image,
+      icon: image,
       scrollwheel: false,
       draggable: false
 
