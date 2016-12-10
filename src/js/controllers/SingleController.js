@@ -60,8 +60,9 @@ function loadMarker(person){
       draggable: false
 
   });
-  vm.map.setZoom(10);
+  vm.map.setZoom(11);
   vm.map.panTo(marker.position);
+  vm.map.setOptions({scrollwheel: false});
 
   console.log('marker:', marker)
 }
