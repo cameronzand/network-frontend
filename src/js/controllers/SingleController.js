@@ -30,8 +30,8 @@ function SingleController (UserService, $stateParams, $state, NgMap) {
       NgMap.getMap(googlemap).then(function(map){
         vm.map = map;
         vm.nearby.forEach(function(user){
-        loadMarker(user.location)
-
+        loadMarker(user)
+        console.log('user:', user)
         })
       });
       console.log('nearby:')
@@ -42,16 +42,15 @@ function SingleController (UserService, $stateParams, $state, NgMap) {
 
 
 function loadMarker(person){
-  vm.nearby.forEach(function(img){
-    vm.image = img.user.img
-    console.log('img:', vm.image);
-  })
-//console.log('img:', vm.nearby[0].user.img)
-  let position = new google.maps.LatLng(person.lat, person.long)
+ 
+
+ // console.log('nearbyimage:', person.user.img)
+
+  let position = new google.maps.LatLng(person.location.lat, person.location.long)
 
   var image = {
-        url: vm.image, // image is 512 x 512
-        scaledSize : new google.maps.Size(22, 32)
+        url: person.user.img, 
+        scaledSize: new google.maps.Size(30, 30)
   };
   var marker = new google.maps.Marker({
       map: vm.map,
@@ -61,7 +60,7 @@ function loadMarker(person){
       draggable: false
 
   });
-  vm.map.setZoom(7);
+  vm.map.setZoom(10);
   vm.map.panTo(marker.position);
 
   console.log('marker:', marker)
