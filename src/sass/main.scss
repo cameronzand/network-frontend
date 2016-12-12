@@ -492,24 +492,24 @@ h1{
 }
 .msg1{
 	
-  font-size: 15px;
-    width: 70%;
-    border-radius: 15px;
-    padding-left: 13px;
-    margin-left: 5px;
-    height: 65px;
-    margin-bottom: 15px;
-    text-shadow: 1px 2px 4px #294171;
-    border: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0, 0, 0.85);
-
+  // font-size: 15px;
+  //   width: 70%;
+  //   border-radius: 15px;
+  //   padding-left: 13px;
+  //   margin-left: 5px;
+  //   height: 65px;
+  //   margin-bottom: 15px;
+  //   text-shadow: 1px 2px 4px #294171;
+  //   border: none;
+  //   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0, 0, 0, 0.85);
+}
 p{
     width: 100%;
 }
 form{
 	
 }
-}
+
 
 .MessageBox{
 	border: solid;
@@ -519,4 +519,15 @@ form{
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.sender{
+
+	color: red;
+	text-align: right;
+	margin-right: 5px;
+}
+
+.recip{
+	color: blue;
+	margin-left: 5px;
+}
 
