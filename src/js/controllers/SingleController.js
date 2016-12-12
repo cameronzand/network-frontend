@@ -59,6 +59,7 @@ function loadMarker(person){
       scrollwheel: false,
       draggable: false
 
+
   });
   vm.map.setZoom(11);
   vm.map.panTo(marker.position);
