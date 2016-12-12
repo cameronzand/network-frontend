@@ -18,31 +18,16 @@
 
 <div class="msgwrapper">
 
+	<div ng-repeat="mail in message.messages" class="msg1">
 
+		{{mail.content}}
 
-
-
-<div ng-repeat="mail in message.messages" class="msg1">
-
-{{mail.content}}
-
-<p>{{mail.updated_at}}</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+		<p>{{mail.updated_at}}</p>
+	</div>
 
 </div>
+
 <form name="chatform" ng-submit="message.postComment()">
-<input class="comment-input" type="text" placeholder="Message..." ng-model="message.content"/>
-<button class="button comment-button">+</button></input>
-</form> -->
+	<input class="comment-input" type="text" placeholder="Message..." ng-model="message.content"/>
+	<button class="button comment-button">+</button></input>
+</form> 
