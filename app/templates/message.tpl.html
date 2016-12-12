@@ -21,9 +21,10 @@
 
 	<div ng-repeat="mail in message.messages" class="msg1" ng-class="{'sender': message.sender === mail.sender_id, 'recip': message.recip === mail.sender_id}">
 
+
 		{{mail.content}}
 
-		<p>{{mail.updated_at}}</p>
+	<!-- 	<p>{{mail.updated_at}}</p> -->
 	</div>
 
 </div>
