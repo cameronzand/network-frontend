@@ -14,7 +14,7 @@
 <input class="comment-input" type="text" placeholder="Message..." ng-model="message.content"/></input>
 <button class="button comment-button">+</button>
 </form> -->
-
+<div ng-controller="MessageController">
 <div class="MessageBox">Mssages</div>
 <div class="msgwrapper">
 
@@ -27,6 +27,7 @@
 	<!-- 	<p>{{mail.updated_at}}</p> -->
 	</div>
 
+</div>
 </div>
 
 <form name="chatform" ng-submit="message.postComment()">
