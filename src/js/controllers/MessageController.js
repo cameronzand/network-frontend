@@ -10,7 +10,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
   vm.postComment = postComment;
 	vm.messages = [];
 	vm.content = '';
-  vm.intervalId = setInterval(getConvo, 300000);
+  vm.intervalId = setInterval(getConvo, 3000);
   vm.sender;
   vm.recip;
 
