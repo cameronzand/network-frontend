@@ -1,6 +1,7 @@
 import angular from 'angular';
 import 'ngMap';
-
+import 'angular-ui-router';
+import 'angular-cookies';
 
 
 import { routerConfig } from './routes';
@@ -17,8 +18,6 @@ import { UserService } from './services/users';
 
 
 
-import 'angular-ui-router';
-import 'angular-cookies';
 
 angular 
 	.module('app', ['ui.router', 'ngCookies', 'ngMap'])

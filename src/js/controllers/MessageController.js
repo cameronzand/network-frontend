@@ -39,6 +39,12 @@ function MessageController (UserService, $stateParams, $rootScope) {
 		UserService.getConvo(message, user_id).then(function (show){
   		vm.messages = show.data.reverse();
 
+  
+     // get the id of the last message
+     // let el = document.querySelector('#mail-259');
+     //  el.scrollIntoView(false);
+
+
       vm.sender = show.data[0].sender_id
       vm.recip = show.data[0].recipient_id
 
@@ -47,6 +53,8 @@ function MessageController (UserService, $stateParams, $rootScope) {
         console.log(vm.sender, vm.recip)
     });
 };
+
+ 
 
 	
 };
