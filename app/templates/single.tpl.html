@@ -19,7 +19,8 @@
 			    <div class="usersP">{{single.user.name}}, {{single.user.age}}</div>
 
 
-				<div class="emailP">{{single.nearby.length}} Nearby Users</div> 
+				<i class="fa fa-location-arrow gps" aria-hidden="true"></i>
+<a href="#/nearby" class="linkedincolor">{{single.nearby.length}} Nearby Users</a> 
 			</div>
 <div class = "about">
 <h1>About Me</h1>
@@ -35,8 +36,9 @@
 
 <ng-map id="googlemap">
 </ng-map>
-
-<div class ="comp">
+<br>
+<br>
+<!-- <div class ="comp">
 
 
 	
@@ -44,11 +46,11 @@
      </button></a>
 
 </div>
-<div></div>
+<div></div> -->
 
-<div class = "nearP"
+<!-- <div class = "nearP"
  ng-repeat="nearbyUser in single.nearby"/>
-</div>
+</div> -->
 
 </div>
 </div>

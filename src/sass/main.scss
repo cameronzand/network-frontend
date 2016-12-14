@@ -691,7 +691,7 @@ form{
 //     margin-left: 85px;
 // }
 a:hover{
-    color: lightgrey;
+    color: #A2C4FC;
 }
 
 .fa {
@@ -713,8 +713,23 @@ a:hover{
 }
 
 
-
-.chatform{
-	background:white;
+.linkedincolor {
+    color: blue;
 }
+
+.gps {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+input[type="text"], textarea {
+
+  background-color : white; 
+
+}
+
+
+
+
+
 
