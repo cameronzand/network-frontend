@@ -5,28 +5,34 @@
 <nav class="foot">
 <!-- 	<span class="navspace white"><a href="#/"><img src=images/tab2.jpg></a></span> -->
 	<div class="navfix">
-	<span class="navspace white"	
-	    ng-show="!layout.loggedIn"><a href="#/login">Login</a></span>
-	<span class="navspace white"
-		ng-show="!layout.loggedIn"><a href="#/register">Register</a></span>
-	<span class="navspace white" ng-show="layout.loggedIn"><a href="#/login"
-		
-		ng-click="layout.logout()">Logout</a></span>
+	<span class="navspace white spacers"	
+	    ng-show="!layout.loggedIn"><a href="#/login"><i class="fa fa-sign-in" aria-hidden="true"></i></a></span>
+	<span class="navspace white spacers"
+		ng-show="!layout.loggedIn"><a href="#/register"><i class="fa fa-user-plus" aria-hidden="true"></i></a></span>
+
 
 <!-- 	<span class="navspace white"><a href="#/nearby"
 		ng-show="layout.loggedIn">Nearby</a> -->
 
 
 
-	<span class="navspace white"
+	<span class="navspace white chaticon"
 		ng-show="layout.loggedIn"><a href="#/thread"
-		>Chats</a></span>
+		><i class="fa fa-commenting-o" aria-hidden="true"></i></a></span>
 
 
+
+	<span class="navspace white nearbyicon"
+		ng-show="layout.loggedIn"><a href="#/nearby"
+		><i class="fa fa-users" aria-hidden="true"></i></a></span>
 
 	<span class="navspace white"
 		ng-show="layout.loggedIn"><a href="#/users/{{layout.user_id}}"
-		>My Profile</a></span>
+		><i class="fa fa-user" aria-hidden="true"></i></a></span>
+
+	<span class="navspace white signout" ng-show="layout.loggedIn"><a href="#/login"
+		
+		ng-click="layout.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>
 
 
 		<!-- <img ng-src="{{layout.img}}" / class="circlesmall">

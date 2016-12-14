@@ -123,6 +123,8 @@ a{
 .navspace {
 
 	margin-right: 20px;
+
+
 }
 
 .navspace2{
@@ -655,6 +657,21 @@ form{
 a:hover{
     color: lightgrey;
 }
-//
 
+.fa {
+    font-size: 30px;
+}
 
+.signout {
+    float: right;
+    margin-right: 15px;
+}
+
+.chaticon {
+    float: left;
+    margin-left: 15px;
+}
+
+.spacers {
+    margin: 60px;
+}
