@@ -51,7 +51,9 @@ function UserService ($http, $cookies, $state) {
       method: 'GET',
       headers: getHeaders()
     };
+    console.log('id:', id);
     return $http(req);
+
   };
 
   function create (user) {
