@@ -1,27 +1,29 @@
 <div class="thredwrap">
-<h1 class="threadheader">Chat</h1>
+  <h1 class="threadheader">Chat</h1>
 
-<div>
-<a href="#/message/{{ data.id }}" class="blue2">
-	<div ng-repeat="data in thread.thread.users" class="thread">
+     <div>
+        <a href="#/message/{{ data.id }}" class="blue2">
+	         <div ng-repeat="data in thread.thread.users" class="thread">
 
 		
-			<div class="threaddiv">
-			<h2 class="threadname">{{ data.name }}</h2>
-			<div class="threadimg">
-			 <img ng-src="{{data.img}}" class="threadpic1"/><h2 class="tt">Company: {{ data.company }}</h2>
+			     <div class="threaddiv">
+			       <h2 class="threadname">{{ data.name }}</h2>
+			          <div class="threadimg">
+			              <img ng-src="{{data.img}}" class="threadpic1"/><h2 class="tt">Company: {{ data.company }}</h2>
 			
-			</div></a>
+			     </div>
+			     </div>
+			       </div>         </a>
 
 
 		
 
 
    		
+     </div>
+   
+</div>
    </div>
-   </a>
-</div>
-</div>
 <!-- {{thread.thread.users[0].name}} -->
 
 
