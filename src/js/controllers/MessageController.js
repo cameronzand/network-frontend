@@ -10,7 +10,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
   vm.postComment = postComment;
 	vm.messages = [];
 	vm.content = '';
-  vm.intervalId = setInterval(getConvo, 300000000);
+  vm.intervalId = setInterval(getConvo, 3000);
   vm.sender;
   vm.recip;
 
@@ -36,6 +36,7 @@ function MessageController (UserService, $stateParams, $rootScope) {
 	function getConvo (message) {
 
     let user_id = $stateParams.id
+    console.log('user id is: ', user_id, typeof(user_id))
 		UserService.getConvo(message, user_id).then(function (show){
   		vm.messages = show.data.reverse();
 
@@ -43,6 +44,8 @@ function MessageController (UserService, $stateParams, $rootScope) {
      // get the id of the last message
      // let el = document.querySelector('#mail-259');
      //  el.scrollIntoView(false);
+
+     console.log("messages array: ", vm.messages)
 
 
       vm.sender = show.data[0].sender_id
